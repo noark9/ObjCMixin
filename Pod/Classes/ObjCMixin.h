@@ -21,7 +21,7 @@
 @end \
 \
 __attribute__((constructor)) \
-static void __mixin_register_##__LINE__() { \
+static void __mixin_register_##__LINE__##m() { \
     extern Class objc_getClass(const char *); \
     [ObjCMixin mixClass:objc_getClass("__Module__" #m) toTargetClass:[target class]]; \
 }
